@@ -243,7 +243,7 @@ const ScrollableTabView = createReactClass({
       </Animated.ScrollView>;
     } else {
       const scenes = this._composeScenes();
-      return <AnimatedViewPagerAndroid
+      return <Animated.ScrollView
         key={this._children().length}
         style={styles.scrollableContentAndroid}
         initialPage={this.props.initialPage}
@@ -266,7 +266,7 @@ const ScrollableTabView = createReactClass({
         {...this.props.contentProps}
       >
         {scenes}
-      </AnimatedViewPagerAndroid>;
+      </Animated.ScrollView>;
     }
   },
 
